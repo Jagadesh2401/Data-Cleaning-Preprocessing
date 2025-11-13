@@ -1,5 +1,4 @@
-This project is part of my Data Analyst Internship, where I cleaned and preprocessed a raw dataset using Python (Pandas) in Google Colab.
-The dataset used is the Medical Appointments No-Show Dataset, publicly available on Mendeley Data:
+This project focuses on cleaning and preprocessing the Medical Appointments No-Show Dataset obtained from Mendeley Data. The goal was to transform the raw dataset into a structured, analysis-ready format by applying essential data-cleaning techniques.
 
 🔗 Dataset Link: https://data.mendeley.com/datasets/wm6w2fvkfj/1
 
