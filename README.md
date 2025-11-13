@@ -7,100 +7,98 @@ The goal of this task was to clean the dataset by fixing missing values, duplica
 
 🛠 Tools & Technologies
 
-Python
+    Python
 
-Pandas
+    Pandas
 
-Google Colab
+    Google Colab
 
 📁 Files Included
 
-cleaned_medical_appointments.csv
+    cleaned_medical_appointments.csv
 
-medical-appointments-no-show.csv
+    medical-appointments-no-show.csv
 
-Data_Cleaning_and_Preprocessing.ipynb
+    Data_Cleaning_and_Preprocessing.ipynb
 
-README.md
+    README.md
 
 ✅ Data Cleaning Steps Performed
 
-1️⃣ Loaded the Dataset
+ 1️⃣ Loaded the Dataset
 
-Imported the raw CSV file and inspected its structure.
+  Imported the raw CSV file and inspected its structure.
 
-2️⃣ Missing Values Handling
+ 2️⃣ Missing Values Handling
 
-Checked missing values using:
+  Checked missing values using:
 
-df.isnull().sum()
+        df.isnull().sum()
 
+  Removed rows containing nulls using:
 
-Removed rows containing nulls using:
+        df.dropna()
 
-df.dropna()
+  ✔ Final dataset contains 0 missing values.
 
+ 3️⃣ Duplicate Removal
 
-✔ Final dataset contains 0 missing values.
+  Checked duplicates using:
 
-3️⃣ Duplicate Removal
-
-Checked duplicates using:
-
-df.duplicated().sum()
+    df.duplicated().sum()
 
 
-No duplicate rows were found.
+  No duplicate rows were found.
 
-4️⃣ Column Name Standardization
+ 4️⃣ Column Name Standardization
 
-All column names were cleaned by:
+  All column names were cleaned by:
 
-converting to lowercase
+  > converting to lowercase
 
-replacing spaces with underscores
+  > replacing spaces with underscores
 
-replacing hyphens with underscores
+  > replacing hyphens with underscores
 
-Example:
-Entry Service Date → entry_service_date
+   Example:
+      Entry Service Date → entry_service_date
 
-5️⃣ Date Format Conversion
+ 5️⃣ Date Format Conversion
 
-Attempted conversion of all columns containing the word "day":
+  Attempted conversion of all columns containing the word "day":
 
-pd.to_datetime(df[col], errors='coerce')
+    pd.to_datetime(df[col], errors='coerce')
 
 
-Invalid conversions were handled safely using errors='coerce'.
+  Invalid conversions were handled safely using errors='coerce'.
 
-6️⃣ Fixed Data Types
+ 6️⃣ Fixed Data Types
 
-Converted valid date columns to datetime
+  Converted valid date columns to datetime
 
-Ensured numeric columns had proper types
+  Ensured numeric columns had proper types
 
-Cleaned inconsistent text formatting
+  Cleaned inconsistent text formatting
 
-7️⃣ Outlier Check
+ 7️⃣ Outlier Check
 
-Used the IQR method to find extreme values in numeric fields.
+  Used the IQR method to find extreme values in numeric fields.
 
-8️⃣ Exported Clean Dataset
+ 8️⃣ Exported Clean Dataset
 
-Final cleaned dataset saved as:
+  Final cleaned dataset saved as:
 
-cleaned_medical_appointments.csv
+    cleaned_medical_appointments.csv
 
 
 💡 Key Learnings
 
-Identifying and handling missing and duplicate values
+ Identifying and handling missing and duplicate values
 
-Cleaning inconsistent text and date formats
+ Cleaning inconsistent text and date formats
 
-Ensuring correct data types
+ Ensuring correct data types
 
-Exporting a clean, analysis-ready dataset
+ Exporting a clean, analysis-ready dataset
 
-Working with real-world messy data
+ Working with real-world messy data
